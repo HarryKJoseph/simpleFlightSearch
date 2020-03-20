@@ -1,4 +1,4 @@
-# simpleFlightSearch
+### simpleFlightSearch
 Spring Boot service for reading from json
 
 ### flight-search-app
