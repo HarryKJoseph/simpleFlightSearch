@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+        Welcome to {{ title }}!
+      </h1>
+      <table>
+        <tr>
+      <td>Flight Number:</td>
+      <td><input  [(ngModel)]="flightNumber" /></td>
+    
+    <td>Origin:</td>
+      <td><input [(ngModel)]="origin"></td>
+    <td>
+    Destination:
+    </td>
+      <td><input [(ngModel)]="destination" ></td><td>
+      Date:</td>
+      <td><input type="date" [(ngModel)]="date"></td>
+    </table>
+<br><br>
+    <button (click)="search()">Search</button>
+<br><br><br>
+
+<div class="container"> 
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Flight Number</th>
+            <th>Carrier</th>
+            <th>Origin</th>
+            <th>Destination</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let res of results">
+          <td>{{ res.flightNumber }}</td>
+          <td>{{ res.carrier }}</td>
+          <td>{{ res.origin }}</td>
+          <td>{{ res.destination }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
